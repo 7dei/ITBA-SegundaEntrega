@@ -39,10 +39,20 @@
   font-weight: 700;
 }
 
-.product-card__boton {
-  width: 100%;
+.product-card__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   margin-top: auto;
+}
+
+.product-card__boton,
+.product-card__boton-primario {
+  width: 100%;
   border-radius: var(--radius-pill);
+}
+
+.product-card__boton {
   background-color: var(--beige);
   color: var(--dark);
 }

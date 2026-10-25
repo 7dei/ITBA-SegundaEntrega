@@ -3,7 +3,7 @@ import { obtenerProductos } from '../api/productos';
 import ProductCard from './ProductCard';
 import './ProductList.css';
 
-function ProductList({ onVerDetalle }) {
+function ProductList({ onVerDetalle, onAgregar }) {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -48,6 +48,7 @@ function ProductList({ onVerDetalle }) {
             key={producto.id}
             producto={producto}
             onVerDetalle={onVerDetalle}
+            onAgregar={onAgregar}
           />
         ))}
       </div>

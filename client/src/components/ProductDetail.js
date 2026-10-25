@@ -3,7 +3,7 @@ import { obtenerProducto } from '../api/productos';
 import { formatearPrecio } from '../utils/formatearPrecio';
 import './ProductDetail.css';
 
-function ProductDetail({ id, onVolver }) {
+function ProductDetail({ id, onVolver, onAgregar }) {
   const [producto, setProducto] = useState(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -70,9 +70,14 @@ function ProductDetail({ id, onVolver }) {
             <h3>Descripción</h3>
             <p>{producto.descripcion}</p>
           </div>
-          <button className="btn btn-primario" type="button" onClick={onVolver}>
-            ← Volver al catálogo
-          </button>
+          <div className="detalle__acciones">
+            <button className="btn btn-primario" type="button" onClick={() => onAgregar(producto.id)}>
+              Agregar al carrito
+            </button>
+            <button className="btn detalle__volver" type="button" onClick={onVolver}>
+              ← Volver al catálogo
+            </button>
+          </div>
         </div>
       </div>
     </section>

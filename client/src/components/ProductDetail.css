@@ -64,8 +64,27 @@
   color: var(--dark);
 }
 
-.detalle__info .btn {
+.detalle__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
   margin-top: var(--spacing-sm);
+}
+
+.detalle__acciones .btn {
+  width: 100%;
+}
+
+.detalle__volver {
+  border: 1px solid var(--beige-strong);
+  background-color: transparent;
+  color: var(--primary-dark);
+}
+
+.detalle__volver:hover {
+  border-color: var(--primary);
+  background-color: var(--white);
 }
 
 .detalle-producto--estado {
