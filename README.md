@@ -77,4 +77,3 @@ flowchart LR
 ## Limitaciones
 - El carrito no tiene panel, checkout ni persistencia.
 - No hay tests automatizados.
-- `npm audit` del client reporta 56 vulnerabilidades heredadas de `react-scripts` (CRA); no se tocan porque la consigna pide CRA. El backend tiene 0.
