@@ -38,7 +38,14 @@
   --shadow-hover: 0 8px 15px rgba(41, 33, 29, 0.15);
   --container: 1200px;
   --container-max: 1200px;
+  --header-height: 77px;
   --transition: 180ms ease;
+}
+
+@media (max-width: 899px) {
+  :root {
+    --header-height: 108px;
+  }
 }
 
 *,
@@ -154,6 +161,19 @@ h3 {
   width: 1.15em;
   height: 1.15em;
   flex-shrink: 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow--light {
+  color: var(--gold);
 }
 
 .skip-link {

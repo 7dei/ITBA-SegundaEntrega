@@ -38,6 +38,7 @@ function Footer() {
           <h2 className="footer__title">Explorar</h2>
           <a href="#inicio">Inicio</a>
           <a href="#catalogo">Catálogo completo</a>
+          <a href="#contacto">Contacto</a>
         </nav>
 
         <div className="footer__col">

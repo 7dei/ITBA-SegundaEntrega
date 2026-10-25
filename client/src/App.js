@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         ) : (
           <ProductList onVerDetalle={verDetalle} onAgregar={agregarAlCarrito} />
         )}
+        <ContactForm />
       </main>
       <Footer />
     </>
