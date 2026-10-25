@@ -131,6 +131,17 @@ h3 {
   padding: var(--spacing-lg) clamp(1rem, 4vw, 2rem);
 }
 
+.estado {
+  display: grid;
+  min-height: 40vh;
+  padding: var(--spacing-xl) var(--spacing-md);
+  place-items: center;
+  color: var(--primary-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  text-align: center;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

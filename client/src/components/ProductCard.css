@@ -21,8 +21,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   padding: var(--spacing-md);
 }
 
@@ -38,4 +37,17 @@
   color: var(--gold);
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.product-card__boton {
+  width: 100%;
+  margin-top: auto;
+  border-radius: var(--radius-pill);
+  background-color: var(--beige);
+  color: var(--dark);
+}
+
+.product-card__boton:hover {
+  background-color: var(--primary);
+  color: var(--white);
 }

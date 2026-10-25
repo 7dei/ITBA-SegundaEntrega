@@ -3,7 +3,7 @@ import { obtenerProductos } from '../api/productos';
 import ProductCard from './ProductCard';
 import './ProductList.css';
 
-function ProductList() {
+function ProductList({ onVerDetalle }) {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
@@ -44,7 +44,11 @@ function ProductList() {
       <h2 className="productos__titulo">Nuestro Catálogo</h2>
       <div className="productos__grilla">
         {productos.map((producto) => (
-          <ProductCard key={producto.id} producto={producto} />
+          <ProductCard
+            key={producto.id}
+            producto={producto}
+            onVerDetalle={onVerDetalle}
+          />
         ))}
       </div>
     </section>

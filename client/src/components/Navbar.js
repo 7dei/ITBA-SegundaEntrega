@@ -1,19 +1,28 @@
 import './Navbar.css';
 
-function Navbar({ cantidadCarrito = 0 }) {
+function Navbar({ cantidadCarrito = 0, onVerCatalogo }) {
   return (
     <header className="navbar" id="inicio">
-      <a className="navbar__marca" href="#inicio" aria-label="Hermanos Jota, ir al inicio">
+      <a
+        className="navbar__marca"
+        href="#inicio"
+        aria-label="Hermanos Jota, ir al inicio"
+        onClick={onVerCatalogo}
+      >
         <img className="navbar__logo" src="/img/logo.svg" alt="Logo Hermanos Jota" />
       </a>
 
       <nav className="navbar__nav" aria-label="Navegación principal">
         <ul>
           <li>
-            <a href="#inicio">Inicio</a>
+            <a href="#inicio" onClick={onVerCatalogo}>
+              Inicio
+            </a>
           </li>
           <li>
-            <a href="#catalogo">Catálogo</a>
+            <a href="#catalogo" onClick={onVerCatalogo}>
+              Catálogo
+            </a>
           </li>
           <li>
             <a href="#contacto">Contacto</a>

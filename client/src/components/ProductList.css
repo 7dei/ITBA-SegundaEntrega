@@ -14,17 +14,6 @@
   gap: var(--spacing-lg);
 }
 
-.estado {
-  display: grid;
-  min-height: 40vh;
-  padding: var(--spacing-xl) var(--spacing-md);
-  place-items: center;
-  color: var(--primary-dark);
-  font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  text-align: center;
-}
-
 @media (min-width: 768px) {
   .productos__grilla {
     grid-template-columns: repeat(2, minmax(0, 1fr));
