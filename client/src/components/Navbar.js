@@ -61,7 +61,12 @@ function Navbar({ cantidadCarrito = 0, vistaActual, onNavegar }) {
           </nav>
 
           <div className="navbar__acciones">
-            <button className="navbar__carrito" type="button" aria-label="Ver carrito">
+            <span
+              className="navbar__carrito"
+              aria-label={`Carrito: ${cantidadCarrito} ${
+                cantidadCarrito === 1 ? 'producto' : 'productos'
+              }`}
+            >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -77,7 +82,7 @@ function Navbar({ cantidadCarrito = 0, vistaActual, onNavegar }) {
               </svg>
               <span className="navbar__carrito-texto">Carrito</span>
               <span className="navbar__contador">{cantidadCarrito}</span>
-            </button>
+            </span>
 
             <button
               type="button"

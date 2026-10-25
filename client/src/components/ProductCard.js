@@ -20,6 +20,7 @@ function ProductCard({ producto, onVerDetalle, onAgregar }) {
           <button
             className="btn product-card__boton"
             type="button"
+            aria-label={`Ver detalle de ${producto.nombre}`}
             onClick={() => onVerDetalle(producto.id)}
           >
             Ver detalle
@@ -40,6 +41,7 @@ function ProductCard({ producto, onVerDetalle, onAgregar }) {
           <button
             className="btn btn-primario product-card__boton-primario"
             type="button"
+            aria-label={`Añadir ${producto.nombre} al carrito`}
             onClick={() => onAgregar(producto.id)}
           >
             <svg

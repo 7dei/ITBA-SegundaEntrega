@@ -51,7 +51,7 @@
 
 .footer__title {
   margin-bottom: 0.25rem;
-  color: var(--gold);
+  color: var(--cream);
   font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 700;
@@ -99,8 +99,12 @@
   gap: 0.5rem;
   padding-block: 1.2rem;
   border-top: 1px solid rgba(245, 230, 211, 0.14);
-  color: rgba(245, 230, 211, 0.55);
+  color: var(--beige-strong);
   font-size: 0.72rem;
+}
+
+.footer a:focus-visible {
+  outline-color: var(--gold);
 }
 
 @media (min-width: 760px) {

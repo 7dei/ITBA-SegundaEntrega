@@ -54,7 +54,9 @@
 
 .navbar__link {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   padding: 0.4rem 0;
   color: var(--cream);
   font-size: 0.74rem;
@@ -69,7 +71,7 @@
 .navbar__link::after {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0.7rem;
   left: 0;
   height: 2px;
   background-color: var(--gold);
@@ -146,8 +148,8 @@
 
 .navbar__toggle {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   border: 1px solid rgba(245, 230, 211, 0.25);
   border-radius: 50%;

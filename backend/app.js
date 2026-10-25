@@ -6,6 +6,8 @@ const productosRouter = require('./routes/productos');
 
 const app = express();
 
+app.disable('x-powered-by');
+
 app.use(logger);
 app.use(express.json());
 app.use('/api/productos', productosRouter);

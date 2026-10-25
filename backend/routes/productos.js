@@ -8,11 +8,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  const id = Number(req.params.id);
-
-  if (!Number.isInteger(id) || id <= 0) {
+  if (!/^[1-9]\d*$/.test(req.params.id)) {
     return res.status(400).json({ error: 'Id inválido' });
   }
+
+  const id = Number(req.params.id);
 
   const producto = productos.find((item) => item.id === id);
 

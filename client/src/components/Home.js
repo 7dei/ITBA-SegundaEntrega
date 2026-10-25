@@ -142,15 +142,15 @@ function Home({ onNavegar }) {
 
             <ul className="hero__trust" aria-label="Nuestros compromisos">
               <li>
-                <strong>10 años</strong>
+                <strong>10 años</strong>{' '}
                 <span>de garantía estructural</span>
               </li>
               <li>
-                <strong>FSC®</strong>
+                <strong>FSC®</strong>{' '}
                 <span>maderas certificadas</span>
               </li>
               <li>
-                <strong>Hecho a mano</strong>
+                <strong>Hecho a mano</strong>{' '}
                 <span>por ebanistas locales</span>
               </li>
             </ul>
@@ -168,7 +168,7 @@ function Home({ onNavegar }) {
             <div className="hero__badge">
               <MapPinIcon />
               <span>
-                Casa taller
+                Casa taller{' '}
                 <strong>San Cristóbal</strong>
               </span>
             </div>

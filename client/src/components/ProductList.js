@@ -24,6 +24,7 @@ function ProductList({ onVerDetalle, onAgregar }) {
     const cargarProductos = async () => {
       try {
         const data = await obtenerProductos();
+        if (!Array.isArray(data)) throw new Error('Respuesta inválida');
         if (activo) setProductos(data);
       } catch {
         if (activo) {
@@ -168,6 +169,8 @@ function ProductList({ onVerDetalle, onAgregar }) {
             )}
           </div>
 
+          <h2 className="sr-only">Productos disponibles</h2>
+
           {productosFiltrados.length > 0 ? (
             <div className="productos__grilla">
               {productosFiltrados.map((producto) => (
@@ -178,6 +181,11 @@ function ProductList({ onVerDetalle, onAgregar }) {
                   onAgregar={onAgregar}
                 />
               ))}
+            </div>
+          ) : productos.length === 0 ? (
+            <div className="productos__vacio" role="status">
+              <h2>Catálogo vacío</h2>
+              <p>Todavía no hay piezas disponibles.</p>
             </div>
           ) : (
             <div className="productos__vacio" role="status">

@@ -34,8 +34,6 @@
   --shadow-sm: 0 2px 8px rgba(41, 33, 29, 0.06);
   --shadow-md: 0 12px 30px rgba(41, 33, 29, 0.1);
   --shadow-lg: 0 24px 60px rgba(41, 33, 29, 0.14);
-  --shadow: 0 4px 6px rgba(41, 33, 29, 0.08);
-  --shadow-hover: 0 8px 15px rgba(41, 33, 29, 0.15);
   --container: 1200px;
   --container-max: 1200px;
   --header-height: 77px;
@@ -82,6 +80,7 @@ body {
 
 main {
   flex: 1;
+  scroll-margin-top: var(--header-height);
 }
 
 img {
@@ -112,7 +111,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--primary-dark);
   outline-offset: 3px;
 }
 
@@ -177,7 +176,7 @@ h3 {
 }
 
 .eyebrow--light {
-  color: var(--gold);
+  color: var(--cream);
 }
 
 .sr-only {
@@ -210,17 +209,6 @@ h3 {
 
 .skip-link:focus {
   transform: translateY(0);
-}
-
-.estado {
-  display: grid;
-  min-height: 40vh;
-  padding: var(--spacing-xl) var(--spacing-md);
-  place-items: center;
-  color: var(--primary-dark);
-  font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  text-align: center;
 }
 
 .btn {

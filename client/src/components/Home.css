@@ -324,7 +324,7 @@
 .contact-cta p {
   max-width: 38rem;
   margin-top: 0.8rem;
-  color: rgba(245, 230, 211, 0.8);
+  color: var(--cream);
   font-size: 0.95rem;
 }
 
@@ -335,6 +335,10 @@
 
 .contact-cta__btn:hover {
   background-color: var(--white);
+}
+
+.contact-cta__btn:focus-visible {
+  outline-color: var(--cream);
 }
 
 @keyframes aparecer {

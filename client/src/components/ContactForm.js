@@ -57,9 +57,9 @@ function ContactForm() {
     <section id="contacto" className="contacto" aria-labelledby="contacto-titulo">
       <div className="contacto__head">
         <p className="eyebrow">Contacto</p>
-        <h2 id="contacto-titulo" className="contacto__titulo">
+        <h1 id="contacto-titulo" className="contacto__titulo">
           Hablemos de tu próximo mueble
-        </h2>
+        </h1>
         <p className="contacto__bajada">
           Podés escribirnos por consultas de productos, proyectos a medida o para coordinar una
           visita a la casa taller.

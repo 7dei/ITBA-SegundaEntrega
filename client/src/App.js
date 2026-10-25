@@ -14,12 +14,12 @@ function App() {
   const navegar = (destino) => {
     setVista(destino);
     setProductoSeleccionado(null);
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const verDetalle = (id) => {
     setProductoSeleccionado(id);
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const volverAlCatalogo = () => navegar('catalogo');
