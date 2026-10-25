@@ -1,6 +1,11 @@
 import './Footer.css';
 
-function Footer() {
+function Footer({ onNavegar }) {
+  const navegar = (destino) => (evento) => {
+    evento.preventDefault();
+    onNavegar(destino);
+  };
+
   return (
     <footer className="footer">
       <div className="footer__main container">
@@ -36,9 +41,15 @@ function Footer() {
 
         <nav className="footer__col" aria-label="Enlaces del pie de página">
           <h2 className="footer__title">Explorar</h2>
-          <a href="#inicio">Inicio</a>
-          <a href="#catalogo">Catálogo completo</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#inicio" onClick={navegar('inicio')}>
+            Inicio
+          </a>
+          <a href="#catalogo" onClick={navegar('catalogo')}>
+            Catálogo completo
+          </a>
+          <a href="#contacto" onClick={navegar('contacto')}>
+            Contacto
+          </a>
         </nav>
 
         <div className="footer__col">

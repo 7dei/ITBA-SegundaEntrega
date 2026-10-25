@@ -1,23 +1,28 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 function App() {
+  const [vista, setVista] = useState('inicio');
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const [carrito, setCarrito] = useState([]);
+
+  const navegar = (destino) => {
+    setVista(destino);
+    setProductoSeleccionado(null);
+    window.scrollTo(0, 0);
+  };
 
   const verDetalle = (id) => {
     setProductoSeleccionado(id);
     window.scrollTo(0, 0);
   };
 
-  const volverAlCatalogo = () => {
-    setProductoSeleccionado(null);
-    window.scrollTo(0, 0);
-  };
+  const volverAlCatalogo = () => navegar('catalogo');
 
   const agregarAlCarrito = (id) => {
     setCarrito((anteriores) => {
@@ -40,20 +45,31 @@ function App() {
       <a className="skip-link" href="#contenido">
         Saltar al contenido
       </a>
-      <Navbar cantidadCarrito={cantidadCarrito} onVerCatalogo={volverAlCatalogo} />
-      <main id="contenido" className="contenedor" tabIndex={-1}>
+      <Navbar
+        cantidadCarrito={cantidadCarrito}
+        vistaActual={productoSeleccionado ? 'catalogo' : vista}
+        onNavegar={navegar}
+      />
+      <main
+        id="contenido"
+        className={vista === 'inicio' && !productoSeleccionado ? 'home-main' : 'contenedor'}
+        tabIndex={-1}
+      >
         {productoSeleccionado ? (
           <ProductDetail
             id={productoSeleccionado}
             onVolver={volverAlCatalogo}
             onAgregar={agregarAlCarrito}
           />
-        ) : (
+        ) : vista === 'inicio' ? (
+          <Home onNavegar={navegar} />
+        ) : vista === 'catalogo' ? (
           <ProductList onVerDetalle={verDetalle} onAgregar={agregarAlCarrito} />
+        ) : (
+          <ContactForm />
         )}
-        <ContactForm />
       </main>
-      <Footer />
+      <Footer onNavegar={navegar} />
     </>
   );
 }

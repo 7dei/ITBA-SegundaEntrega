@@ -44,7 +44,7 @@
 
 @media (max-width: 899px) {
   :root {
-    --header-height: 108px;
+    --header-height: 69px;
   }
 }
 
@@ -155,6 +155,10 @@ h3 {
 .container {
   width: min(calc(100% - 2.5rem), var(--container));
   margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
 }
 
 .icon {
