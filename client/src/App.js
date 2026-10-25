@@ -1,8 +1,16 @@
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <main className="contenedor">
-      <h1>Mueblería Hermanos Jota</h1>
-    </main>
+    <>
+      <Navbar cantidadCarrito={0} />
+      <main className="contenedor">
+        <ProductList />
+      </main>
+      <Footer />
+    </>
   );
 }
 
